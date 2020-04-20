@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>ResTeCo: Mannheim</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Chung-hong Chan, Hartmut Wessler" />
+    <meta name="date" content="2020-04-20" />
+    <link href="libs/animate.css-xaringan/animate.fade.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link href="libs/text-poster/text-poster.css" rel="stylesheet" />
+    <script src="libs/text-poster/text-poster.js"></script>
+    <script src="libs/text-poster/text-poster-init.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: right middle hide-count
+background-color: white
+background-position: left
+
+&lt;link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Karla|Montserrat|Open+Sans|Quattrocento|Raleway&amp;display=swap" rel="stylesheet"&gt;
+
+
+
+
+
+
+
+
+&lt;style type="text/css"&gt;
+a, a &gt; code {
+  color: #D55E00FF;
+  text-decoration: none;
+}
+
+em {
+  color: #D55E00FF;
+  font-style: normal;
+}
+
+del {
+  color: #E5E5E5;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.inverse del {
+  color: #6C7B7F;
+}
+
+.bg-white-o90{
+   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.large { font-size: 175% }
+
+.hide-count .remark-slide-number {
+  display: none;
+}
+
+.text-poster {
+	font-family: 'Cinzel', serif;
+}
+
+.inverse {
+  color: #b9bfca;
+  background-color: #282D35
+}
+
+.inverse.remark-slide-number {
+  color: #b9bfca;
+}
+
+.remark-code-line-highlighted {
+  color: #D55E00FF;
+  background-color: transparent;
+}
+
+.remark-inline-code {
+  color: #b9bfca;
+}
+
+.h2 {
+  font-family: 'Karla'
+}
+&lt;/style&gt;
+
+.pull-right[
+  # ResTeCo: Sofware and Data from the Mannheim Team
+]
+
+Chung-hong Chan
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#282D35;" viewBox="0 0 512 512"&gt;&lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/&gt;&lt;/svg&gt; @chainsawriot
+
+---
+
+# R packages
+
+* textsdc
+* textplex
+* resdtmf
+* rectr
+
+---
+
+# textsdc
+
+Statistical cleaning of text data
+
+* Identify possible duplicates in text data by fuzzy matching and automatically remove them
+
+URL: [https://github.com/chainsawriot/textsdc](https://github.com/chainsawriot/textsdc)
+
+---
+
+class: middle, inverse
+
+![](sdc.svg)&lt;!-- --&gt;
+
+---
+
+# textplex
+
+Calculate textual complexity using the algorithm by [Tolochko &amp; Boomgaarden (2019)](https://ijoc.org/index.php/ijoc/article/view/9952).
+
+* Calculation of semantic complexity and syntactic complexity of text
+
+URL: [https://github.com/chainsawriot/textplex](https://github.com/chainsawriot/textplex)
+
+---
+
+class: middle, inverse
+
+![](plex.svg)&lt;!-- --&gt;
+
+---
+
+# resdtmf &lt;img src="resdtmf_logo.png" align="right" height="200" /&gt;
+
+Responsible Document-term Matrix Format
+
+* Machine readable format of document-term matrices with DublinCore 1.5 meta data.
+
+URL: [https://github.com/chainsawriot/resdfmf](https://github.com/chainsawriot/textplex)
+
+---
+
+```json
+{
+  "triplets": [
+    {
+      "docid": "text1",
+      "tid": 1,
+      "f": 1
+    },
+    {
+      "docid": "text3",
+      "tid": 1,
+      "f": 1
+    },
+    {
+      "docid": "text1",
+      "tid": 2,
+      "f": 1
+    },
+    {
+      "docid": "text2",
+      "tid": 2,
+      "f": 1
+    },
+    {
+      "docid": "text1",
+      "tid": 3,
+      "f": 1
+    },
+    {
+      "docid": "text2",
+      "tid": 3,
+      "f": 1
+    },
+    {
+      "docid": "text3",
+      "tid": 3,
+      "f": 1
+    },
+    {
+      "docid": "text2",
+      "tid": 4,
+      "f": 1
+    },
+    {
+      "docid": "text3",
+      "tid": 5,
+      "f": 1
+    }
+  ],
+  "features": [
+    {
+      "tid": 1,
+      "term": "i"
+    },
+    {
+      "tid": 2,
+      "term": "love"
+    },
+    {
+      "tid": 3,
+      "term": "you"
+    },
+    {
+      "tid": 4,
+      "term": "me"
+    },
+    {
+      "tid": 5,
+      "term": "hate"
+    }
+  ],
+  "dumped_docvars": [
+    {
+      "docid": "text1",
+      "sentiment": 1
+    },
+    {
+      "docid": "text2",
+      "sentiment": 1
+    },
+    {
+      "docid": "text3",
+      "sentiment": 0
+    }
+  ],
+  "dumped_meta": [],
+  "order_of_content": [
+    {
+      "order": 1,
+      "docid": "text1"
+    },
+    {
+      "order": 2,
+      "docid": "text2"
+    },
+    {
+      "order": 3,
+      "docid": "text3"
+    }
+  ]
+}
+```
+
+---
+
+class: middle, inverse
+
+![](resdtmf.svg)&lt;!-- --&gt;
+
+---
+
+# rectr &lt;img src="rectr_logo.png" align="right" height="200" /&gt;
+
+Reproducible Extraction of Cross-lingual Topics using R.
+
+* Please refer to another ICA 2020 presentation.
+
+URL: [https://github.com/chainsawriot/rectr](https://github.com/chainsawriot/rectr)
+
+---
+
+# Reproducible material for our articles
+
+* How combining terrorism, Muslim, and refugee topics drives emotional tone in online news
+    * [osf](https://osf.io/a4dqp/?view_only=96eab9d2ed714ba9b7350ab2e1a497b2) - DTM in resdtmf
+* Reproducible Extraction of Cross-lingual Topics using R
+    * [github](https://github.com/chainsawriot/rectr)
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
