@@ -113,7 +113,7 @@ del {
 ```
 
 .pull-right[
-  # ResTeCo: Sofware and Data from the Mannheim Team
+  # ResTeCo: Software and Data from the Mannheim Team
 ]
 
 Chung-hong Chan
@@ -153,7 +153,7 @@ knitr::include_graphics("sdc.svg")
 
 Calculate textual complexity using the algorithm by [Tolochko & Boomgaarden (2019)](https://ijoc.org/index.php/ijoc/article/view/9952).
 
-* Calculation of semantic complexity and syntactic complexity of text
+* Calculate semantic and syntactic complexity of text
 
 URL: [https://github.com/chainsawriot/textplex](https://github.com/chainsawriot/textplex)
 
@@ -292,7 +292,9 @@ knitr::include_graphics("resdtmf.svg")
 
 # rectr <img src="rectr_logo.png" align="right" height="200" />
 
-Reproducible Extraction of Cross-lingual Topics using R.
+Reproducible Extraction of Cross-lingual Topics using R. 
+
+(Top paper, ICA Computational Methods Interest Group.)
 
 * Please refer to another ICA 2020 presentation.
 
@@ -308,3 +310,4 @@ URL: [https://github.com/chainsawriot/rectr](https://github.com/chainsawriot/rec
     * [github](https://github.com/chainsawriot/rectr)
 
 ---
+
