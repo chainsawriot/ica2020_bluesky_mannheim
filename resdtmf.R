@@ -11,8 +11,10 @@ input_dfm <- put_dc(input_dfm, dc_meta)
 
 export_resdtmf(input_dfm, "input_dfm.json")
 
-input_dfm <- import_resdtmf("input_dfm.json")
+dfm_from_resdtmf <- import_resdtmf("input_dfm.json")
 
-inspect_dc(input_dfm[4,])
+dfm_from_resdtmf
+
+inspect_dc(dfm_from_resdtmf[4,])
 
 
