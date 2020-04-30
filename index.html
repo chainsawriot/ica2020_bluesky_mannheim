@@ -1,101 +1,42 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>ResTeCo: Mannheim</title>
+    <title>Responsible Terrorism Coverage</title>
     <meta charset="utf-8" />
     <meta name="author" content="Chung-hong Chan, Hartmut Wessler" />
-    <meta name="date" content="2020-04-21" />
-    <link href="libs/animate.css-xaringan/animate.fade.css" rel="stylesheet" />
-    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
-    <link href="libs/text-poster/text-poster.css" rel="stylesheet" />
-    <script src="libs/text-poster/text-poster.js"></script>
-    <script src="libs/text-poster/text-poster-init.js"></script>
-    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <meta name="date" content="2020-04-30" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/tile-view-0.0.14/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.0.14/tile-view.js"></script>
+    <link href="libs/animate.css-xaringan-3.7.2/animate.fade.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-logo-0.0.14/logo.js"></script>
+    <link rel="stylesheet" href="mzes_fonts.css" type="text/css" />
+    <link rel="stylesheet" href="mzes.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
+class: center, middle, inverse, title-slide
 
-
-class: right middle hide-count
-background-color: white
-background-position: left
-
-&lt;link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Karla|Montserrat|Open+Sans|Quattrocento|Raleway&amp;display=swap" rel="stylesheet"&gt;
-
-
-
-
-
-
-
-
-&lt;style type="text/css"&gt;
-a, a &gt; code {
-  color: #D55E00FF;
-  text-decoration: none;
-}
-
-em {
-  color: #D55E00FF;
-  font-style: normal;
-}
-
-del {
-  color: #E5E5E5;
-  text-decoration: none;
-  font-weight: normal;
-}
-
-.inverse del {
-  color: #6C7B7F;
-}
-
-.bg-white-o90{
-   background-color: rgba(255, 255, 255, 0.9);
-}
-
-.large { font-size: 175% }
-
-.hide-count .remark-slide-number {
-  display: none;
-}
-
-.text-poster {
-	font-family: 'Cinzel', serif;
-}
-
-.inverse {
-  color: #b9bfca;
-  background-color: #282D35
-}
-
-.inverse.remark-slide-number {
-  color: #b9bfca;
-}
-
-.remark-code-line-highlighted {
-  color: #D55E00FF;
-  background-color: transparent;
-}
-
-.remark-inline-code {
-  color: #b9bfca;
-}
-
-.h2 {
-  font-family: 'Karla'
-}
-&lt;/style&gt;
-
-.pull-right[
-  # ResTeCo: Software and Data from the Mannheim Team
-]
-
-Chung-hong Chan
-
-&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#282D35;" viewBox="0 0 512 512"&gt;&lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/&gt;&lt;/svg&gt; @chainsawriot
+# Responsible Terrorism Coverage
+## Software and Data from the Mannheim Team
+### Chung-hong Chan, Hartmut Wessler
+### 2020-04-30
 
 ---
+
+
+<style type="text/css">
+.xaringan-extra-logo {
+  width: 250px;
+  height: 128px;
+  z-index: 0;
+  background-image: url('mzes_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top:1em;right:1em;
+}
+</style>
 
 # R packages
 
@@ -115,7 +56,7 @@ Statistical cleaning of text data
 URL: [https://github.com/chainsawriot/textsdc](https://github.com/chainsawriot/textsdc)
 
 ---
-
+background-color: #282D35
 class: middle, inverse
 
 ![](sdc.svg)&lt;!-- --&gt;
@@ -131,14 +72,16 @@ Calculate textual complexity using the algorithm by [Tolochko &amp; Boomgaarden 
 URL: [https://github.com/chainsawriot/textplex](https://github.com/chainsawriot/textplex)
 
 ---
-
+background-color: #282D35
 class: middle, inverse
 
 ![](plex.svg)&lt;!-- --&gt;
 
 ---
 
-# resdtmf &lt;img src="resdtmf_logo.png" align="right" height="200" /&gt;
+# resdtmf 
+
+&lt;img src="resdtmf_logo.png" align="right" height="300" /&gt;
 
 Responsible Document-term Matrix Format
 
@@ -252,14 +195,16 @@ URL: [https://github.com/chainsawriot/resdfmf](https://github.com/chainsawriot/t
 ```
 
 ---
-
+background-color: #282D35
 class: middle, inverse
 
 ![](resdtmf.svg)&lt;!-- --&gt;
 
 ---
 
-# rectr &lt;img src="rectr_logo.png" align="right" height="200" /&gt;
+# rectr 
+
+&lt;img src="rectr_logo.png" align="right" height="300" /&gt;
 
 Reproducible Extraction of Cross-lingual Topics using R. 
 
@@ -280,15 +225,23 @@ URL: [https://github.com/chainsawriot/rectr](https://github.com/chainsawriot/rec
 
 ---
 
+# R packages
+
+* textsdc
+* textplex
+* resdtmf
+* rectr
+
+&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#282D35;" viewBox="0 0 512 512"&gt;&lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/&gt;&lt;/svg&gt; @chainsawriot
+
+[Slides](https://chainsawriot.github.io/ica2020_bluesky_mannheim/)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"slideNumberFormat": "%current%",
 "highlightStyle": "github",
-"highlightLines": true,
-"ratio": "16:9",
-"countIncrementalSlides": true
+"countIncrementalSlides": false,
+"ratio": "16:9"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
@@ -355,23 +308,51 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
   }
 })();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+(function(time) {
+  var d2 = function(number) {
+    return ('0' + number).slice(-2); // left-pad 0 to minutes/seconds
+  },
+
+  time_format = function(total) {
+    var secs = Math.abs(total) / 1000;
+    var h = Math.floor(secs / 3600);
+    var m = Math.floor(secs % 3600 / 60);
+    var s = Math.round(secs % 60);
+    var res = d2(m) + ':' + d2(s);
+    if (h > 0) res = h + ':' + res;
+    return res;  // [hh:]mm:ss
+  },
+
+  slide_number_div = function(i) {
+    return document.getElementsByClassName('remark-slide-number').item(i);
+  },
+
+  current_page_number = function(i) {
+    return slide_number_div(i).firstChild.textContent;  // text "i / N"
   };
 
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
+  var timer = document.createElement('span'); timer.id = 'slide-time-left';
+  var time_left = time, k = slideshow.getCurrentSlideIndex(),
+      last_page_number = current_page_number(k);
+
+  setInterval(function() {
+    time_left = time_left - 1000;
+    timer.innerHTML = ' ' + time_format(time_left);
+    if (time_left < 0) timer.style.color = 'red';
+  }, 1000);
+
+  slide_number_div(k).appendChild(timer);
+
+  slideshow.on('showSlide', function(slide) {
+    var i = slide.getSlideIndex(), n = current_page_number(i);
+    // reset timer when a new slide is shown and the page number is changed
+    if (last_page_number !== n) {
+      time_left = time; last_page_number = n;
+      timer.innerHTML = ' ' + time_format(time); timer.style.color = null;
+    }
+    slide_number_div(i).appendChild(timer);
+  });
+})(60000);</script>
 
 <script>
 slideshow._releaseMath = function(el) {

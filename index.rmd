@@ -1,126 +1,25 @@
 ---
-title: "ResTeCo: Mannheim"
+title: "Responsible Terrorism Coverage"
+subtitle: "Software and Data from the Mannheim Team"
 author: "Chung-hong Chan, Hartmut Wessler"
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    seal: false
+    css: [default, mzes_fonts.css, mzes.css]
     lib_dir: libs
-    css: xaringan-themer.css
     nature:
-      titleSlideClass: ["bottom", "left"]
-      slideNumberFormat: "%current%"
+      countdown: 60000
       highlightStyle: github
-      highlightLines: true
-      ratio: "16:9"
-      countIncrementalSlides: true
+      countIncrementalSlides: false
+      ratio: '16:9'
 ---
 
-class: right middle hide-count
-background-color: white
-background-position: left
-
-<link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Karla|Montserrat|Open+Sans|Quattrocento|Raleway&display=swap" rel="stylesheet">
-
-
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(highlight = TRUE)
-```
-
-```{r xaringan-themer, include=FALSE}
-library(xaringanthemer)
-mono_light(
-  white_color = "#fff",
-  header_font_google = google_font("Helvetica", "600"),
-  text_font_google = google_font("Karla", "300", "300i"),
-  code_font_google = google_font("Fira Code"),
-  text_font_size = "24px",
-  code_font_size = "1.2em"
-)
-
-opaque_box <- function(x) {
-  htmltools::tags$div(
-    class = "f1 bg-white-o90 pa6 shadow-3 h-75",
-    htmltools::tags$h1(htmltools::tags$em(x))
-  )
-}
-
-```
-
-```{r xaringan-animate-all, echo=FALSE}
+```{r xaringanExtra, echo = FALSE}
+xaringanExtra::use_tile_view()
+## Control the transitional animation. 
 xaringanExtra::use_animate_all("fade")
-xaringanExtra::use_tachyons()
-xaringanExtra::use_text_poster()
+xaringanExtra::use_logo(image_url = "mzes_logo.png", width = 250)
 ```
-
-```{css echo=FALSE}
-a, a > code {
-  color: #D55E00FF;
-  text-decoration: none;
-}
-
-em {
-  color: #D55E00FF;
-  font-style: normal;
-}
-
-del {
-  color: #E5E5E5;
-  text-decoration: none;
-  font-weight: normal;
-}
-
-.inverse del {
-  color: #6C7B7F;
-}
-
-.bg-white-o90{
-   background-color: rgba(255, 255, 255, 0.9);
-}
-
-.large { font-size: 175% }
-
-.hide-count .remark-slide-number {
-  display: none;
-}
-
-.text-poster {
-	font-family: 'Cinzel', serif;
-}
-
-.inverse {
-  color: #b9bfca;
-  background-color: #282D35
-}
-
-.inverse.remark-slide-number {
-  color: #b9bfca;
-}
-
-.remark-code-line-highlighted {
-  color: #D55E00FF;
-  background-color: transparent;
-}
-
-.remark-inline-code {
-  color: #b9bfca;
-}
-
-.h2 {
-  font-family: 'Karla'
-}
-```
-
-.pull-right[
-  # ResTeCo: Software and Data from the Mannheim Team
-]
-
-Chung-hong Chan
-
-`r fontawesome::fa("twitter", fill = "#282D35")` @chainsawriot
-
----
 
 # R packages
 
@@ -140,7 +39,7 @@ Statistical cleaning of text data
 URL: [https://github.com/chainsawriot/textsdc](https://github.com/chainsawriot/textsdc)
 
 ---
-
+background-color: #282D35
 class: middle, inverse
 
 ```{r, echo=FALSE}
@@ -158,7 +57,7 @@ Calculate textual complexity using the algorithm by [Tolochko & Boomgaarden (201
 URL: [https://github.com/chainsawriot/textplex](https://github.com/chainsawriot/textplex)
 
 ---
-
+background-color: #282D35
 class: middle, inverse
 
 ```{r, echo=FALSE}
@@ -167,7 +66,9 @@ knitr::include_graphics("plex.svg")
 
 ---
 
-# resdtmf <img src="resdtmf_logo.png" align="right" height="200" />
+# resdtmf 
+
+<img src="resdtmf_logo.png" align="right" height="300" />
 
 Responsible Document-term Matrix Format
 
@@ -281,7 +182,7 @@ URL: [https://github.com/chainsawriot/resdfmf](https://github.com/chainsawriot/t
 ```
 
 ---
-
+background-color: #282D35
 class: middle, inverse
 
 ```{r, echo=FALSE}
@@ -290,7 +191,9 @@ knitr::include_graphics("resdtmf.svg")
 
 ---
 
-# rectr <img src="rectr_logo.png" align="right" height="200" />
+# rectr 
+
+<img src="rectr_logo.png" align="right" height="300" />
 
 Reproducible Extraction of Cross-lingual Topics using R. 
 
@@ -311,3 +214,13 @@ URL: [https://github.com/chainsawriot/rectr](https://github.com/chainsawriot/rec
 
 ---
 
+# R packages
+
+* textsdc
+* textplex
+* resdtmf
+* rectr
+
+`r fontawesome::fa("twitter", fill = "#282D35")` @chainsawriot
+
+[Slides](https://chainsawriot.github.io/ica2020_bluesky_mannheim/)
