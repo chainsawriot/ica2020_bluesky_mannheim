@@ -1,8 +1,11 @@
 ---
 title: "Responsible Terrorism Coverage"
 subtitle: "Software and Data from the Mannheim Team"
-author: "Chung-hong Chan, Hartmut Wessler"
+author: "Chung-hong Chan"
 date: "`r Sys.Date()`"
+params:
+  animation: "fade"
+  twitter: ""
 output:
   xaringan::moon_reader:
     css: [default, mzes_fonts.css, mzes.css]
@@ -16,11 +19,9 @@ output:
 
 ```{r xaringanExtra, echo = FALSE}
 xaringanExtra::use_tile_view()
-## Control the transitional animation. 
-xaringanExtra::use_animate_all("fade")
-xaringanExtra::use_logo(image_url = "mzes_logo.png", width = 250)
+xaringanExtra::use_animate_all(params$animation)
+xaringanExtra::use_logo(image_url = "img/mzes_logo.png", width = 280)
 ```
-
 # R packages
 
 * textsdc
@@ -224,3 +225,4 @@ URL: [https://github.com/chainsawriot/rectr](https://github.com/chainsawriot/rec
 `r fontawesome::fa("twitter", fill = "#282D35")` @chainsawriot
 
 [Slides](https://chainsawriot.github.io/ica2020_bluesky_mannheim/)
+
