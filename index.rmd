@@ -20,7 +20,7 @@ output:
 ```{r xaringanExtra, echo = FALSE}
 xaringanExtra::use_tile_view()
 xaringanExtra::use_animate_all(params$animation)
-xaringanExtra::use_logo(image_url = "img/mzes_logo.png", width = 280)
+xaringanExtra::use_logo(image_url = 'img/mzes_logo.png', width = 280)
 ```
 # R packages
 
